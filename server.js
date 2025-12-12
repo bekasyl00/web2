@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 // GET — Render HTML form
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // POST — Calculate BMI
