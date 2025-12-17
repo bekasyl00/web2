@@ -4,21 +4,17 @@ const path = require("path");
 
 const app = express();
 
-// Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// GET — Render HTML form
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// POST — Calculate BMI
 app.post("/calculate-bmi", (req, res) => {
     const weight = parseFloat(req.body.weight);
     const height = parseFloat(req.body.height);
 
-    // Extra inputs from student requirement
     const fatDensity = parseFloat(req.body.fatDensity);
     const muscleIndex = parseFloat(req.body.muscleIndex);
 
@@ -28,14 +24,12 @@ app.post("/calculate-bmi", (req, res) => {
 
     const bmi = weight / (height * height);
 
-    // Determine category
     let category = "";
     if (bmi < 18.5) category = "Underweight";
     else if (bmi < 24.9) category = "Normal weight";
     else if (bmi < 29.9) category = "Overweight";
     else category = "Obese";
 
-    // Recommendations array
     const recommendations = {
         "Underweight": "Increase calorie intake, add strength training.",
         "Normal weight": "Maintain balanced diet and regular exercise.",
