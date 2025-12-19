@@ -9,19 +9,12 @@
 <div class="container">
     <h1>BMI Calculator</h1>
 
-    <form action="/calculate-bmi" method="POST">
-
+    <form action="/validate" method="POST">
         <label>Weight (kg):</label>
         <input type="number" step="0.1" name="weight" required>
 
         <label>Height (m):</label>
         <input type="number" step="0.01" name="height" required>
-
-        <label>Density of fatness:</label>
-        <input type="number" step="0.01" name="fatDensity" required>
-
-        <label>Index of muscles:</label>
-        <input type="number" step="0.01" name="muscleIndex" required>
 
         <button type="submit">Calculate BMI</button>
     </form>
