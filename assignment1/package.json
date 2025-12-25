@@ -1,0 +1,23 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "first project",
+  "main": "script js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bekasyl00/web2.git"
+  },
+  "author": "bekasyl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bekasyl00/web2/issues"
+  },
+  "homepage": "https://github.com/bekasyl00/web2#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "express": "^5.2.1"
+  }
+}
